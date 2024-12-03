@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASY ENGLISH - Baixe Agora</title>
+    <style>
+        /* Corpo da página */
+        body {
+            font-family: 'Comic Sans MS', Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #1e90ff, #87cefa);
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Fundo animado */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .particles span {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-100px);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Container principal */
+        .container {
+            margin-top: 50px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Título */
+        h1 {
+            font-size: 4em;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            margin: 0;
+        }
+
+        /* Texto descritivo */
+        p {
+            font-size: 1.5em;
+            color: #f0f8ff;
+        }
+
+        /* Botão de download */
+        .download-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(45deg, #ff4500, #ff6347);
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s, box-shadow 0.4s, background 0.4s;
+            margin-top: 20px;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(45deg, #ff6347, #ff4500);
+        }
+
+        /* Bandeiras animadas */
+        .flags {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .flag {
+            width: 100px;
+            height: 50px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .flag:hover {
+            transform: scale(1.2);
+            border-color: #fff;
+            box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.6);
+        }
+
+        .flag.us {
+            background-image: url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg');
+        }
+
+        .flag.uk {
+            background-image: url('https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg');
+        }
+
+        /* Seção azul extra */
+        .extra-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(0, 0, 139, 0.8); /* Azul translúcido */
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .extra-section p {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: #1e90ff;
+            color: #fff;
+            font-size: 0.9em;
+            box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animações */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fundo animado -->
+    <div class="particles">
+        <!-- Partículas aleatórias -->
+        <span style="top: 10%; left: 20%; animation-duration: 4s;"></span>
+        <span style="top: 40%; left: 50%; animation-duration: 5s;"></span>
+        <span style="top: 70%; left: 80%; animation-duration: 6s;"></span>
+        <span style="top: 30%; left: 10%; animation-duration: 7s;"></span>
+        <span style="top: 60%; left: 40%; animation-duration: 8s;"></span>
+    </div>
+
+    <div class="container">
+        <h1>EASY ENGLISH</h1>
+        <p>Baixe agora e melhore seu inglês com facilidade e diversão!</p>
+        <a href="C:\Users\Sirius Black\Downloads\Telegram Desktop\Easy English\Easy_English.apk" class="download-btn" download>Baixar APK</a>
+
+        <div class="flags">
+            <div class="flag us" onclick="showMessage('Explore o inglês americano!')"></div>
+            <div class="flag uk" onclick="showMessage('Aprenda com sotaque britânico!')"></div>
+        </div>
+
+        <div class="extra-section">
+            <p>Aulas com bate-papo ao vivo!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Easy English. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function showMessage(message) {
+            alert(message);
+        }
+    </script>
+</body>
+</html>
